@@ -15,13 +15,13 @@ public class NewsDemo {
 	public static void main(String[] args) {
 		News news = new News();
 
-		Subscriber subscriber1 = new Subscriber("batman", news);
+		SimpleDisplay simpleDisplay = new SimpleDisplay(news);
 		news.setNews("Earthquake!!", "Today, Earthquake happens!!");
 
-		Subscriber subscriber2 = new Subscriber("superman", news);
+		DetailDisplay detailDisplay  = new DetailDisplay(news);
 		news.setNews("Flood!!", "Today, Flood happens!!");
 
-		news.deleteObserver(subscriber1);
+		news.deleteObserver(simpleDisplay);
 		news.setNews("Warm", "It is warm today.");
 	}
 }
